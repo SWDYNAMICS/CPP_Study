@@ -28,7 +28,7 @@ private:
     char *phoneNum;
     int pos;
 public:
-    NameCard(char * myname, char * myCompany, char * myPhone, int myPos){
+    NameCard(char * myname, char * myCompany, char * myPhone, int myPos):pos(myPos){
         int len1 = strlen(myname);
         int len2 = strlen(myCompany);
         int len3 = strlen(myPhone);
@@ -38,7 +38,7 @@ public:
         strcpy(name,myname);
         strcpy(companyName,myCompany);
         strcpy(phoneNum,myPhone);
-        pos = myPos;
+        
     }
     void ShowNameCardInfo(){
         cout << "name: " << name << endl;
